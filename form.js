@@ -38,10 +38,10 @@ module.exports = checkContrasena;
 // no puede  dejarse vacío.
 
 
-function checkContrasena(password) {
+function checkTelefono(phone) {
     const expresion = /^\d+$/g
-    const pattern = password.match(expresion)
-    if (pattern !== null && password.length === 7) {
+    const pattern = phone.match(expresion)
+    if (pattern !== null && phone.length === 7) {
         return true
     } else {
         return false

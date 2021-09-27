@@ -1,13 +1,13 @@
 /*Valida que el nombre solo tenga caracteres alfabéticos, mayúsculas, minúsculas con acentos y espacios. Longitud mínima de 4 caracteres y máxima de 30*/ 
-function checkNombre(valor){
-    if(/^[a-zA-ZÁ-ÿ\s]{4,30}$/.test(valor)){
+
+function checkNombre(value){
+    if(/^[a-zA-ZÁ-ÿ\s]{4,30}$/.test(value)){
         return true;
     }
     else{
         return false;
     }
 }
-module.exports = checkNombre;
 
 // Validar  el campo  teléfono, este 
 // campo  debe tener una longitud  de 
@@ -16,17 +16,16 @@ module.exports = checkNombre;
 // no puede  dejarse vacío.
 
 
-function checkTelefono(phone) {
+function checkTelefono(valor) {
     const expresion = /^\d+$/g;
-    const pattern = phone.match(expresion);
-    if (pattern !== null && phone.length === 7) {
+    const pattern = valor.match(expresion);
+    if (pattern !== null && valor.length === 7) {
         return true;
     } else {
         return false;
     }
 }
 
-module.exports = checkTelefono;
 
 // Validación Dirección
 // Este campo debe de contener caracteres alfanuméricos y 
@@ -37,17 +36,16 @@ module.exports = checkTelefono;
 
 function checkDir(valor){
     const expresion = /^[0-9a-zA-Z #-]+$/; 
-    const pattern = direc.match(expresion);
-    if (pattern !== null && direc.length <= 50) {
+    const pattern = valor.match(expresion);
+    if (pattern !== null && valor.length <= 50) {
         return true;
     } else {
         return false;
     }
 }
 
-module.exports = checkDir;
-
 function checkCorreo(valor){
+    valor = document.getElementById("correo")
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(valor))
     {
         return true;
@@ -56,7 +54,6 @@ function checkCorreo(valor){
     return false;
 }
 
-module.exports = checkCorreo;
 
 // Validación  de la contraseña, en donde 
 // el usuario deba  de ingresar por lo 
@@ -66,9 +63,9 @@ module.exports = checkCorreo;
 // campo  es requerido,  por lo que, no se 
 // puede  dejar vacío.
 
-function checkContrasena(password) {
+function checkContrasena(valor) {
     const expresion = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,30}$/g;
-    const pattern = password.match(expresion);
+    const pattern = valor.match(expresion);
     if (pattern === null) {
         return false;
     } else {
@@ -76,16 +73,6 @@ function checkContrasena(password) {
     }
 }
 
-
-module.exports = {
-    checkNombre,
-    checkTelefono,
-    checkDir,
-    checkCorreo,
-    checkContrasena
-}
-
-
-
+module.exports = { checkNombre, checkTelefono, checkDir, checkCorreo, checkContrasena };
 
 

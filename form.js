@@ -1,3 +1,14 @@
+/*Valida que el nombre solo tenga caracteres alfabéticos, mayúsculas, minúsculas con acentos y espacios. Longitud mínima de 4 caracteres y máxima de 30*/ 
+function checkNombre(valor){
+    if(/^[a-zA-ZÁ-ÿ\s]{4,30}$/.test(valor)){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+module.exports = checkNombre;
+
 function checkCorreo(valor){
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(valor))
     {
@@ -81,3 +92,4 @@ function checkNombre(valor){
     }
 }
 module.exports = checkNombre;
+

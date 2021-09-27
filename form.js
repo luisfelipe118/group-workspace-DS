@@ -35,7 +35,7 @@ module.exports = checkTelefono;
 // caracteres y al ser un campo requerido no puede
 // quedar vacío
 
-function checkDir(direc){
+function checkDir(valor){
     const expresion = /^[0-9a-zA-Z #-]+$/; 
     const pattern = direc.match(expresion);
     if (pattern !== null && direc.length <= 50) {

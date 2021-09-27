@@ -12,10 +12,10 @@ module.exports = checkNombre;
 function checkCorreo(valor){
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(valor))
     {
-        return (true)
+        return (true);
     }
     
-    return (false)
+    return (false);
 }
 
 module.exports = checkCorreo;
@@ -32,9 +32,9 @@ function checkContrasena(password) {
     const expresion = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,30}$/g
     const pattern = password.match(expresion)
     if (pattern === null) {
-        return false
+        return false;
     } else {
-        return true
+        return true;
     }
 }
 
@@ -50,12 +50,12 @@ module.exports = checkContrasena;
 
 
 function checkTelefono(phone) {
-    const expresion = /^\d+$/g
-    const pattern = phone.match(expresion)
+    const expresion = /^\d+$/g;
+    const pattern = phone.match(expresion);
     if (pattern !== null && phone.length === 7) {
-        return true
+        return true;
     } else {
-        return false
+        return false;
     }
 }
 
@@ -70,26 +70,13 @@ module.exports = checkTelefono;
 
 function checkDir(direc){
     const expresion = /^[0-9a-zA-Z #-]+$/; 
-    const pattern = direc.match(expresion)
+    const pattern = direc.match(expresion);
     if (pattern !== null && direc.length <= 50) {
-        return true
+        return true;
     } else {
-        return false
+        return false;
     }
 }
 
 module.exports = checkDir;
-
-/*Valida que el nombre solo tenga caracteres alfabéticos, mayúsculas,
-minúsculas con acentos y espacios. Longitud mínima de 4 caracteres
-y máxima de 30*/ 
-function checkNombre(valor){
-    if(/^[a-zA-ZÁ-ÿ\s]{4,30}$/.test(valor)){
-        return true;
-    }
-    else{
-        return false;
-    }
-}
-module.exports = checkNombre;
 

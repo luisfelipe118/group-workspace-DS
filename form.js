@@ -49,3 +49,22 @@ function checkTelefono(phone) {
 }
 
 module.exports = checkTelefono;
+
+// Validación Dirección
+// Este campo debe de contener caracteres alfanuméricos y 
+// únicamente los caracteres especiales de # y -. Así mismo,
+// el campo deberá de contar con una longitud no mayor a 50
+// caracteres y al ser un campo requerido no puede
+// quedar vacío
+
+function checkDir(direc){
+    const expresion = /^[0-9a-zA-Z #-]+$/; 
+    const pattern = direc.match(expresion)
+    if (pattern !== null && direc.length <= 50) {
+        return true
+    } else {
+        return false
+    }
+}
+
+module.exports = checkDir;

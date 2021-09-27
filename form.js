@@ -77,7 +77,14 @@ function checkContrasena(password) {
 }
 
 
-module.exports = checkContrasena;
+module.exports = {
+    checkNombre,
+    checkTelefono,
+    checkDir,
+    checkCorreo,
+    checkContrasena
+}
+
 
 
 

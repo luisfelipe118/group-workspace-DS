@@ -74,5 +74,3 @@ function checkContrasena(valor) {
 }
 
 module.exports = { checkNombre, checkTelefono, checkDir, checkCorreo, checkContrasena };
-
-

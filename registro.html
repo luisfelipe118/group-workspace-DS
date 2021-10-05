@@ -1,40 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./estilos.css">
+    <title>Neexpiry - home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="./estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://www.w3schools.com/lib/w3-theme-black.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 </head>
-<body>
-    
-            <header>
-                <nav id="nav-menu">                  
-                                                            
-                </nav>
-            </header>
+<body id="myPage">
 
-            <form id="form-registro">
-                <br>
-                <label>Nombre</label><br>
-                <input type="text" id="Nombre" name="Nombre" ><br>
-                <label>Genero</label><br>
-                <input type="radio" id="M" name="Genero" value="M">
-                <label>M</label>
-                <input type="radio" id="F" name="Genero" value="F">
-                <label>F</label><br><br>
-                <label>Telefono</label><br>
-                <input type="tel" id="Telefono" name="Telefono" ><br>
-                <label>Direccion</label><br>
-                <input type="text" id="Direccion" name="Direccion" ><br>
-                <label>Correo</label><br>
-                <input type="email" id="Correo" name="Correo"><br>
-                <label>Contrasena</label><br>
-                <input type="password" id="Contrasena" name="Contrasena"><br><br>
-                <input type="submit" id="btn-submit-form" value="Registrar">
-            </form>
-            
-    
+    <!-- Navbar -->
+    <div class="w3-top w3-cursive">
+        <div class="w3-bar w3-theme-l1 w3-left-align">
+          <a
+            class="
+              w3-bar-item
+              w3-button
+              w3-hide-medium
+              w3-hide-large
+              w3-right
+              w3-hover-white
+              w3-theme-l1
+            "
+            href="javascript:void(0);"
+            onclick="openNav()"
+            ><i class="fa fa-bars"></i
+          ></a>
+          <a href="./index.html" class="w3-bar-item w3-button w3-teal w3-col m2"
+            ><i class="fa fa-home w3-margin-right"></i>Neexpiry</a
+          >
+  
+          <a
+            href="#work"
+            class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-col m2"
+            >Que es Neexpiry</a
+          >
+  
+          <a
+            href="#team"
+            class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-col m2"
+            >Grupo de trabajo</a
+          >
+          
+          <a
+            href="#pricing"
+            class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-col m2"
+            >Precios</a
+          >
+          <a
+            href="#contact"
+            class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-col m2"
+            >Contacto</a
+          >
+        </div>
+  
+        <!-- Navbar on small screens -->
+        <div
+          id="navDemo"
+          class="w3-bar-block w3-theme-l1 w3-hide w3-hide-large w3-hide-medium w3-cursive"
+        >
+          <a href="#work" class="w3-bar-item w3-button">Que es Neexpiry</a>
+          <a href="#team" class="w3-bar-item w3-button">Grupo de trabajo</a>        
+          <a href="#pricing" class="w3-bar-item w3-button">Precios</a>
+          <a href="#contact" class="w3-bar-item w3-button">Contacto</a>
+        </div>
+      </div>
+
+    <div class="w3-display-container w3-animate-opacity">
+        <img src="./headerimg.jpg" alt="misiontic">
+        <div class="w3-container w3-display-bottomleft w3-margin-bottom w3-cursive w3-large w3-text-indigo">      
+            Junto con mision tic 2022 y Neexpiry ayudaremos a las tiendas colombianas.      
+        </div>
+    </div>
+
+    <div class="w3-container w3-blue">
+        <h2>Registro</h2>
+    </div>
+    <form class="w3-container w3-margin" id="form-registro">
+        <br>
+        <label>Nombre</label><br>
+        <input class="w3-input" type="text" id="Nombre" name="Nombre" ><br>
+        <label>Genero</label><br>
+        <input class="w3-radio w3-margin-right" type="radio" id="M" name="Genero" value="M">
+        <label class="w3-margin-right">M</label>
+        <input class="w3-radio w3-margin-right" type="radio" id="F" name="Genero" value="F">
+        <label>F</label><br><br>
+        <label>Telefono</label><br>
+        <input class="w3-input" type="tel" id="Telefono" name="Telefono" ><br>
+        <label>Direccion</label><br>
+        <input class="w3-input" type="text" id="Direccion" name="Direccion" ><br>
+        <label>Correo</label><br>
+        <input class="w3-input" type="email" id="Correo" name="Correo"><br>
+        <label>Contrasena</label><br>
+        <input class="w3-input" type="password" id="Contrasena" name="Contrasena"><br><br>
+        <input class="w3-button w3-green" type="submit" id="btn-submit-form" value="Registrar">
+    </form>
 </body>
 </html>

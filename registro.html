@@ -51,11 +51,6 @@
           >
           
           <a
-            href="#pricing"
-            class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-col m2"
-            >Precios</a
-          >
-          <a
             href="#contact"
             class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-col m2"
             >Contacto</a
@@ -68,8 +63,7 @@
           class="w3-bar-block w3-theme-l1 w3-hide w3-hide-large w3-hide-medium w3-cursive"
         >
           <a href="#work" class="w3-bar-item w3-button">Que es Neexpiry</a>
-          <a href="#team" class="w3-bar-item w3-button">Grupo de trabajo</a>        
-          <a href="#pricing" class="w3-bar-item w3-button">Precios</a>
+          <a href="#team" class="w3-bar-item w3-button">Grupo de trabajo</a>    
           <a href="#contact" class="w3-bar-item w3-button">Contacto</a>
         </div>
       </div>
@@ -77,31 +71,67 @@
     <div class="w3-display-container w3-animate-opacity">
         <img src="./headerimg.jpg" alt="misiontic">
         <div class="w3-container w3-display-bottomleft w3-margin-bottom w3-cursive w3-large w3-text-indigo">      
-            Junto con mision tic 2022 y Neexpiry ayudaremos a las tiendas colombianas.      
+            Junto con Mision TIC 2022 y Neexpiry ayudaremos a las tiendas colombianas.      
         </div>
     </div>
 
     <div class="w3-container w3-blue">
-        <h2>Registro</h2>
+        <h2 class="w3-center">Registro</h2>
     </div>
-    <form class="w3-container w3-margin" id="form-registro">
-        <br>
-        <label>Nombre</label><br>
-        <input class="w3-input" type="text" id="Nombre" name="Nombre" ><br>
-        <label>Genero</label><br>
-        <input class="w3-radio w3-margin-right" type="radio" id="M" name="Genero" value="M">
-        <label class="w3-margin-right">M</label>
-        <input class="w3-radio w3-margin-right" type="radio" id="F" name="Genero" value="F">
-        <label>F</label><br><br>
-        <label>Telefono</label><br>
-        <input class="w3-input" type="tel" id="Telefono" name="Telefono" ><br>
-        <label>Direccion</label><br>
-        <input class="w3-input" type="text" id="Direccion" name="Direccion" ><br>
-        <label>Correo</label><br>
-        <input class="w3-input" type="email" id="Correo" name="Correo"><br>
-        <label>Contrasena</label><br>
-        <input class="w3-input" type="password" id="Contrasena" name="Contrasena"><br><br>
-        <input class="w3-button w3-green" type="submit" id="btn-submit-form" value="Registrar">
-    </form>
+    <div class="w3-row">
+      <div class="w3-container w3-quarter">
+      </div>
+      <div class="w3-container w3-half">
+        <form class="w3-container w3-margin" id="form-registro">
+          <br>
+          <label>Nombre comercial</label><br>
+          <input autocomplete="off" class="w3-input" type="text" id="Nombre" name="Nombre" ><br>
+          <label>Telefono</label><br>
+          <input autocomplete="off" class="w3-input" type="tel" id="Telefono" name="Telefono" ><br>
+          <label>Direccion</label><br>
+          <input autocomplete="off" class="w3-input" type="text" id="Direccion" name="Direccion" ><br>
+          <label>Correo</label><br>
+          <input autocomplete="off" class="w3-input" type="email" id="Correo" name="Correo"><br>
+          <label>Contrasena</label><br>
+          <input autocomplete="off" class="w3-input" type="password" id="Contrasena" name="Contrasena">
+          <span class="w3-tag w3-tiny w3-blue">Mayus mins number long >= 8</span><br><br>
+          
+          <input class="w3-button w3-green" type="submit" id="btn-submit-form" value="Registrar">
+        </form>
+    
+        <div class="w3-panel w3-green w3-display-container" id="msjRegistro" style="display: none;">
+          <span onclick="this.parentElement.style.display='none'"
+          class="w3-button w3-large w3-display-topright">&times;</span>
+          <h3>Registro Completo!</h3>
+          <p>Ya te has registrado en Neexpiry, pronto recibiras un correo con mas instrucciones.</p>
+        </div>
+      </div>
+      <div class="w3-container w3-quarter">
+      </div>
+
+    </div>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAhNzltiiinfDOGpY6lK9_dcVXlyleRp34",
+        authDomain: "neexpiry.firebaseapp.com",
+        projectId: "neexpiry",
+        appId: "1:950055525962:web:51b2559f98d9a93d3d10b3"
+      };
+      firebase.initializeApp(config);
+      
+      // make auth and firestore references
+      const db = firebase.firestore();
+
+      // update firestore settings
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+
+    <script src="./index.js"></script>
 </body>
 </html>
